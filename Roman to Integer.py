@@ -1,3 +1,5 @@
+# Time Complexity: O(N)
+# Space Complexity: O(N)
 class Solution:
     def romanToInt(self, s: str) -> int:
         num_list = []

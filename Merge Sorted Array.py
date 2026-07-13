@@ -1,3 +1,6 @@
+# Time Complexity : O(N)
+# Space Complexity: O(1)
+
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         while m > 0 or n > 0:

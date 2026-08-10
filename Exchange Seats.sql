@@ -1,13 +1,13 @@
 """
 Intuition
-بدلاً من محاولة تبديل أسماء الطلاب باستخدام دوال معقدة، الفكرة الأبسط والأسرع في الأداء هي تبديل أرقام المقاعد (`id`) رياضياً. بحيث يصبح رقم المقعد الزوجي فردياً، والفردي يصبح زوجياً، مع استثناء الطالب الأخير في حال كان العدد الإجمالي فردياً ليظل في مكانه.
+Instead of trying to swap student names using complex functions, a simpler and more performant idea is to mathematically swap the seat numbers (id). Even seat numbers become odd, and odd ones become even, with the exception of the last student if the total number of students is odd, keeping them in their original place.
 
 Approach
-نستخدم الجملة الشرطية `CASE` لتعديل قيمة الـ `id` لكل طالب بناءً على الآتي:
-1. إذا كان الـ `id` زوجياً (`id % 2 = 0`)، نطرح منه 1 (`id - 1`) ليرجع خطوة للخلف.
-2. إذا كان الـ `id` هو أكبر رقم في الجدول (الطالب الأخير)، نتركه كما هو (`id`) لأنه لا يوجد طالب بعده ليقوم بالتبديل معه.
-3. عدا ذلك (أي الـ `id` الفردي العادي)، نجمع عليه 1 (`id + 1`) ليتقدم خطوة للأمام.
-4. أخيراً، نقوم بترتيب الجدول بالكامل بناءً على الـ `id` الجديد باستخدام `ORDER BY id`.
+We use a CASE statement to modify the id value for each student based on the following rules:
+1. If the id is even (id % 2 = 0), we subtract 1 (id - 1) to move them back one seat.
+2. If the id is the highest number in the table (the last student), we leave it unchanged (id) since there is no next student to swap with.
+3. Otherwise (a regular odd id), we add 1 (id + 1) to move them forward one seat.
+4. Finally, we sort the result set based on the newly calculated id using ORDER BY id.
 
 Code
 """

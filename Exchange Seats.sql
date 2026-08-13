@@ -1,4 +1,4 @@
-"""
+/*
 Intuition
 Instead of trying to swap student names using complex functions, a simpler and more performant idea is to mathematically swap the seat numbers (id). Even seat numbers become odd, and odd ones become even, with the exception of the last student if the total number of students is odd, keeping them in their original place.
 
@@ -10,7 +10,7 @@ We use a CASE statement to modify the id value for each student based on the fol
 4. Finally, we sort the result set based on the newly calculated id using ORDER BY id.
 
 Code
-"""
+*/
 SELECT
     CASE
         WHEN id % 2 = 0 THEN id - 1

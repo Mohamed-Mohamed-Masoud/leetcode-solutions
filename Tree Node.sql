@@ -1,4 +1,4 @@
-"""
+/*
 Intuition
 To classify each node in a tree, we can determine its position by checking its parent ID (p_id) and seeing whether it serves as a parent to any other nodes in the table.
 
@@ -9,7 +9,7 @@ Approach
 4. Leaf: If neither of the above conditions is met, the node has a parent but no children, meaning it is a leaf node.
 
 Code
-"""
+*/
 SELECT
     id,
     CASE

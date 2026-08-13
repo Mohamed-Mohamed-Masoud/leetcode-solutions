@@ -1,4 +1,4 @@
-"""
+/*
 Intuition
 To find the user with the most friends, we must count every time a user is part of an accepted request. Since a user can be either the one who sent the request or the one who accepted it, we need to look at both columns combined.
 
@@ -10,7 +10,7 @@ Approach
 5. Use LIMIT 1 to extract only the top user with the highest number of friends.
 
 Code
-"""
+*/
 SELECT id, COUNT(*) AS num
 FROM
     (SELECT requester_id as id FROM RequestAccepted
